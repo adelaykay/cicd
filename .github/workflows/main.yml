@@ -1,6 +1,6 @@
 on:
   push:
-    branches: main
+    branches: [main]
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -26,4 +26,4 @@ jobs:
           server: ${{secrets.GET_SERVER_URL}}
           username: ${{secrets.FTP_USERNAME}}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: /views
+          protocol: ftps
